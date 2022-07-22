@@ -1,4 +1,4 @@
-import 'package:result_templte/models/base_response.dart';
+import 'package:result_test/models/base_response.dart';
 
 /// Simplify of Map<String, dynamic>
 typedef MapString = Map<String, dynamic>;

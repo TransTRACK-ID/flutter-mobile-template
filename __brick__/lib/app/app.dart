@@ -84,6 +84,7 @@ class _AppBody extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      routeInformationProvider: appRouter.routeInformationProvider,
       routeInformationParser: appRouter.routeInformationParser,
       routerDelegate: appRouter.routerDelegate,
       theme: ThemeData(

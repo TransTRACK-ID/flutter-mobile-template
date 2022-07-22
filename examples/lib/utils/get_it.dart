@@ -1,13 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:result_templte/helpers/flash_message_helper.dart';
-import 'package:result_templte/helpers/navigation_helper.dart';
-import 'package:result_templte/helpers/notification_helper.dart';
-import 'package:result_templte/helpers/user_helper.dart';
-import 'package:result_templte/services/hive_service.dart';
+import 'package:result_test/helpers/flash_message_helper.dart';
+import 'package:result_test/helpers/navigation_helper.dart';
+import 'package:result_test/helpers/notification_helper.dart';
+import 'package:result_test/helpers/user_helper.dart';
+import 'package:result_test/services/hive_service.dart';
 
 /// Container for DI
 class GetItContainer {

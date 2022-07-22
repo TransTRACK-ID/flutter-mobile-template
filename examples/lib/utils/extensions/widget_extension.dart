@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:result_templte/utils/screen_size.dart';
+import 'package:result_test/utils/screen_size.dart';
 
 extension WidgetExtension on Widget {
   Widget widthFieldSupportMobile(BuildContext context) {

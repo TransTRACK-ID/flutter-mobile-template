@@ -3,9 +3,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/models/user.dart';
-import 'package:result_templte/repositories/main_repository.dart';
-import 'package:result_templte/services/hive_service.dart';
+import 'package:result_test/models/user.dart';
+import 'package:result_test/repositories/main_repository.dart';
+import 'package:result_test/services/hive_service.dart';
 
 part 'app_state.dart';
 

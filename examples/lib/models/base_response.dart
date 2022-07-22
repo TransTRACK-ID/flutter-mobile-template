@@ -4,12 +4,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
-import 'package:result_templte/helpers/flash_message_helper.dart';
-import 'package:result_templte/helpers/user_helper.dart';
-import 'package:result_templte/models/message.dart';
-import 'package:result_templte/models/meta.dart';
-import 'package:result_templte/utils/enums.dart';
-import 'package:result_templte/utils/typedefs.dart';
+import 'package:result_test/helpers/flash_message_helper.dart';
+import 'package:result_test/helpers/user_helper.dart';
+import 'package:result_test/models/message.dart';
+import 'package:result_test/models/meta.dart';
+import 'package:result_test/utils/enums.dart';
+import 'package:result_test/utils/typedefs.dart';
 
 /// Base class for handle response of dio request
 class ResponseOfRequest<T> extends BaseResponse<T> {

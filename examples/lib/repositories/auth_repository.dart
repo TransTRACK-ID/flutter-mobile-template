@@ -1,16 +1,14 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/helpers/flash_message_helper.dart';
-import 'package:result_templte/models/base_response.dart';
-import 'package:result_templte/models/user.dart';
-import 'package:result_templte/repositories/base_repository.dart';
-import 'package:result_templte/services/hive_service.dart';
-import 'package:result_templte/utils/constants.dart';
-import 'package:result_templte/utils/enums.dart';
-import 'package:result_templte/utils/exceptions.dart';
-import 'package:result_templte/utils/typedefs.dart';
+import 'package:result_test/helpers/flash_message_helper.dart';
+import 'package:result_test/models/base_response.dart';
+import 'package:result_test/models/user.dart';
+import 'package:result_test/repositories/base_repository.dart';
+import 'package:result_test/services/hive_service.dart';
+import 'package:result_test/utils/constants.dart';
+import 'package:result_test/utils/enums.dart';
+import 'package:result_test/utils/exceptions.dart';
+import 'package:result_test/utils/typedefs.dart';
 
 class AuthRepository extends BaseRepository {
   Future<BaseResponse<User>> submitLogin(

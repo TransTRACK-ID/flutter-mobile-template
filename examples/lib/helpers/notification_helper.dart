@@ -1,12 +1,10 @@
 import 'dart:io';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/repositories/auth_repository.dart';
+import 'package:result_test/repositories/auth_repository.dart';
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
 const AndroidNotificationChannel androidChannel = AndroidNotificationChannel(
@@ -55,15 +53,15 @@ class NotificationHelper {
     _platformChannelSpecifics =
         const NotificationDetails(android: androidPlatformChannelSpecifics);
 
-    final messaging = FirebaseMessaging.instance;
-    await messaging.requestPermission();
-    await messaging.setForegroundNotificationPresentationOptions(
-      alert: true,
-      badge: true,
-      sound: true,
-    );
+    // final messaging = FirebaseMessaging.instance;
+    // await messaging.requestPermission();
+    // await messaging.setForegroundNotificationPresentationOptions(
+    //   alert: true,
+    //   badge: true,
+    //   sound: true,
+    // );
 
-    await _setupFCM();
+    // await _setupFCM();
   }
 
   /// Manually show notification
@@ -99,48 +97,48 @@ class NotificationHelper {
     // await GetIt.I<NavigationHelper>().push<void>(const MainRoute());
   }
 
-  Future _setupFCM() async {
-    FirebaseMessaging.onBackgroundMessage(_myBackgroundMessageHandler);
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      final notification = message.notification;
-      final android = message.notification?.android;
+  // Future _setupFCM() async {
+  //   FirebaseMessaging.onBackgroundMessage(_myBackgroundMessageHandler);
+  //   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+  //     final notification = message.notification;
+  //     final android = message.notification?.android;
 
-      if (notification != null && android != null) {
-        GetIt.I<FlutterLocalNotificationsPlugin>().show(
-          notification.hashCode,
-          notification.title,
-          notification.body,
-          NotificationDetails(
-            android: AndroidNotificationDetails(
-              androidChannel.id,
-              androidChannel.name,
-              channelDescription: androidChannel.description,
-            ),
-          ),
-        );
-      }
-    });
+  //     if (notification != null && android != null) {
+  //       GetIt.I<FlutterLocalNotificationsPlugin>().show(
+  //         notification.hashCode,
+  //         notification.title,
+  //         notification.body,
+  //         NotificationDetails(
+  //           android: AndroidNotificationDetails(
+  //             androidChannel.id,
+  //             androidChannel.name,
+  //             channelDescription: androidChannel.description,
+  //           ),
+  //         ),
+  //       );
+  //     }
+  //   });
 
-    FirebaseMessaging.instance.onTokenRefresh
-        .listen((fcmToken) {})
-        .onError((dynamic err) {});
-  }
+  //   FirebaseMessaging.instance.onTokenRefresh
+  //       .listen((fcmToken) {})
+  //       .onError((dynamic err) {});
+  // }
 
-  static Future<dynamic> _myBackgroundMessageHandler(
-    RemoteMessage message,
-  ) async {
-    await Firebase.initializeApp();
+  // static Future<dynamic> _myBackgroundMessageHandler(
+  //   RemoteMessage message,
+  // ) async {
+  //   // await Firebase.initializeApp();
 
-    // if (message.containsKey('data')) {
-    //   // Handle data message
-    //   final dynamic data = message['data'];
-    // }
+  //   // if (message.containsKey('data')) {
+  //   //   // Handle data message
+  //   //   final dynamic data = message['data'];
+  //   // }
 
-    // if (message.containsKey('notification')) {
-    //   // Handle notification message
-    //   final dynamic notification = message['notification'];
-    // }
-  }
+  //   // if (message.containsKey('notification')) {
+  //   //   // Handle notification message
+  //   //   final dynamic notification = message['notification'];
+  //   // }
+  // }
 
   static Future _onDidReceiveLocalNotification(
     int id,

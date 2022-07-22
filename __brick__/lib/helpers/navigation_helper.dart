@@ -13,13 +13,13 @@ class NavigationHelper {
     routes: [
       GoRoute(
         path: '/',
-        name: 'SplashPage',
+        name: 'splashpage',
         builder: (context, routerState) => const SplashPage(),
         redirect: redirectWhenAuthenticate,
         routes: [
           GoRoute(
             path: 'login',
-            name: 'LoginPage',
+            name: 'loginpage',
             // builder: (context, routerState) => const LoginPage(),
             pageBuilder: (context, state) => CustomTransitionPage<void>(
               key: state.pageKey,
@@ -66,10 +66,10 @@ class NavigationHelper {
   }
 
   void goToSplash() {
-    goNamed('SplashPage');
+    goNamed('splashpage');
   }
 
   void goToLogin() {
-    goNamed('LoginPage');
+    goNamed('loginpage');
   }
 }

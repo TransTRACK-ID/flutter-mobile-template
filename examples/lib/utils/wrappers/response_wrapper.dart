@@ -1,7 +1,7 @@
-import 'package:result_templte/models/base_response.dart';
-import 'package:result_templte/utils/enums.dart';
-import 'package:result_templte/utils/exceptions.dart';
-import 'package:result_templte/utils/typedefs.dart';
+import 'package:result_test/models/base_response.dart';
+import 'package:result_test/utils/enums.dart';
+import 'package:result_test/utils/exceptions.dart';
+import 'package:result_test/utils/typedefs.dart';
 
 class ResponseWrapper {
   static T guard<T>(

@@ -1,8 +1,8 @@
 // ignore_for_file: cascade_invocations
 
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:result_templte/models/mobile_config.dart';
-import 'package:result_templte/models/user.dart';
+import 'package:result_test/models/mobile_config.dart';
+import 'package:result_test/models/user.dart';
 
 /// Container for store data in local storage.
 class HiveService {

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:result_templte/models/example.dart';
-import 'package:result_templte/repositories/example_repository.dart';
-import 'package:result_templte/utils/wrappers/error_wrapper.dart';
+import 'package:result_test/models/example.dart';
+import 'package:result_test/repositories/example_repository.dart';
+import 'package:result_test/utils/wrappers/error_wrapper.dart';
 
 part 'example_event.dart';
 

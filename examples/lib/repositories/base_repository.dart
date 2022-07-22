@@ -1,9 +1,9 @@
-import 'package:result_templte/models/base_response.dart';
-import 'package:result_templte/services/api_services.dart';
-import 'package:result_templte/utils/enums.dart';
-import 'package:result_templte/utils/exceptions.dart';
-import 'package:result_templte/utils/typedefs.dart';
-import 'package:result_templte/utils/wrappers/response_wrapper.dart';
+import 'package:result_test/models/base_response.dart';
+import 'package:result_test/services/api_services.dart';
+import 'package:result_test/utils/enums.dart';
+import 'package:result_test/utils/exceptions.dart';
+import 'package:result_test/utils/typedefs.dart';
+import 'package:result_test/utils/wrappers/response_wrapper.dart';
 
 abstract class DataTableRepository<M> extends BaseRepository {
   Future<BaseResponse<List<M>>> getDatatable(

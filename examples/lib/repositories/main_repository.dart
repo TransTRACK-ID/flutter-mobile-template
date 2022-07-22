@@ -4,11 +4,11 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/helpers/flash_message_helper.dart';
-import 'package:result_templte/helpers/user_helper.dart';
-import 'package:result_templte/services/hive_service.dart';
-import 'package:result_templte/utils/constants.dart';
-import 'package:result_templte/utils/get_it.dart';
+import 'package:result_test/helpers/flash_message_helper.dart';
+import 'package:result_test/helpers/user_helper.dart';
+import 'package:result_test/services/hive_service.dart';
+import 'package:result_test/utils/constants.dart';
+import 'package:result_test/utils/get_it.dart';
 
 /// Used to initialize the application in splashscreen
 class MainRepository {

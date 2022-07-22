@@ -1,4 +1,4 @@
-# result_templte
+# result_test
 
 A new Flutter project.
 
@@ -28,4 +28,5 @@ A new Flutter project.
 > flutter pub upgrade --major-versions
 
 ## Mason Command
-> mason make bloc --name counter -o lib/counter.dart
+> mason get
+> mason make transtrack_mobile_template --on-conflict overwrite && sh runme.sh

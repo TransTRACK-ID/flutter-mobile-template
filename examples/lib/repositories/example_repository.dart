@@ -1,6 +1,6 @@
-import 'package:result_templte/models/base_response.dart';
-import 'package:result_templte/repositories/base_repository.dart';
-import 'package:result_templte/utils/constants.dart';
+import 'package:result_test/models/base_response.dart';
+import 'package:result_test/repositories/base_repository.dart';
+import 'package:result_test/utils/constants.dart';
 
 class ExampleRepository extends BaseRepository {
   Future<BaseResponse<List>> getExamples(String key) async {

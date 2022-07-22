@@ -1,6 +1,6 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:result_templte/utils/enums.dart';
+import 'package:result_test/utils/enums.dart';
 
 part 'user.g.dart';
 

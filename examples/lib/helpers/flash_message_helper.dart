@@ -1,8 +1,8 @@
 import 'package:flash/flash.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/gen/colors.gen.dart';
-import 'package:result_templte/helpers/navigation_helper.dart';
+import 'package:result_test/gen/colors.gen.dart';
+import 'package:result_test/helpers/navigation_helper.dart';
 
 class FlashMessageHelper {
   /// [message] nullable because we need to create stub in the tests

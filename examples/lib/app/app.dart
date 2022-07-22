@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:result_templte/app/cubit/app_cubit.dart';
-import 'package:result_templte/gen/colors.gen.dart';
-import 'package:result_templte/helpers/navigation_helper.dart';
-import 'package:result_templte/utils/get_it.dart';
+import 'package:result_test/app/cubit/app_cubit.dart';
+import 'package:result_test/gen/colors.gen.dart';
+import 'package:result_test/helpers/navigation_helper.dart';
+import 'package:result_test/utils/get_it.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -84,6 +84,7 @@ class _AppBody extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      routeInformationProvider: appRouter.routeInformationProvider,
       routeInformationParser: appRouter.routeInformationParser,
       routerDelegate: appRouter.routerDelegate,
       theme: ThemeData(

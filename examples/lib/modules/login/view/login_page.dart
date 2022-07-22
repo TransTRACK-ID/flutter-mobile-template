@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:result_templte/gen/assets.gen.dart';
-import 'package:result_templte/gen/colors.gen.dart';
-import 'package:result_templte/modules/login/bloc/login_bloc.dart';
-import 'package:result_templte/modules/login/cubit/form_values_cubit.dart';
-import 'package:result_templte/modules/top_level_bloc/cubit/form_key_cubit.dart';
-import 'package:result_templte/utils/screen_size.dart';
+import 'package:result_test/gen/assets.gen.dart';
+import 'package:result_test/gen/colors.gen.dart';
+import 'package:result_test/modules/login/bloc/login_bloc.dart';
+import 'package:result_test/modules/login/cubit/form_values_cubit.dart';
+import 'package:result_test/modules/top_level_bloc/cubit/form_key_cubit.dart';
+import 'package:result_test/utils/screen_size.dart';
 
 class VisibilityPasswordCubit extends Cubit<bool> {
   VisibilityPasswordCubit() : super(false);

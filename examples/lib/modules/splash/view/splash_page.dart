@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:result_templte/gen/assets.gen.dart';
-import 'package:result_templte/gen/colors.gen.dart';
+import 'package:result_test/gen/assets.gen.dart';
+import 'package:result_test/gen/colors.gen.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);

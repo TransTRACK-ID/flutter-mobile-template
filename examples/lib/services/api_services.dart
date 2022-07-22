@@ -7,10 +7,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:retry/retry.dart';
-import 'package:result_templte/models/base_response.dart';
-import 'package:result_templte/utils/constants.dart';
-import 'package:result_templte/utils/exceptions.dart';
-import 'package:result_templte/utils/typedefs.dart';
+import 'package:result_test/models/base_response.dart';
+import 'package:result_test/utils/constants.dart';
+import 'package:result_test/utils/exceptions.dart';
+import 'package:result_test/utils/typedefs.dart';
 
 /// Base class for all the requests
 class ApiServices {

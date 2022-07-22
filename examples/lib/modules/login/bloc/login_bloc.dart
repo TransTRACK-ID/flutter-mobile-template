@@ -2,11 +2,11 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
-import 'package:result_templte/helpers/navigation_helper.dart';
-import 'package:result_templte/helpers/user_helper.dart';
-import 'package:result_templte/repositories/auth_repository.dart';
-import 'package:result_templte/utils/enums.dart';
-import 'package:result_templte/utils/wrappers/error_wrapper.dart';
+import 'package:result_test/helpers/navigation_helper.dart';
+import 'package:result_test/helpers/user_helper.dart';
+import 'package:result_test/repositories/auth_repository.dart';
+import 'package:result_test/utils/enums.dart';
+import 'package:result_test/utils/wrappers/error_wrapper.dart';
 
 part 'login_event.dart';
 

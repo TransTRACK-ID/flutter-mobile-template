@@ -1,9 +1,9 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
-import 'package:result_templte/helpers/flash_message_helper.dart';
-import 'package:result_templte/helpers/navigation_helper.dart';
-import 'package:result_templte/models/user.dart';
-import 'package:result_templte/services/hive_service.dart';
+import 'package:result_test/helpers/flash_message_helper.dart';
+import 'package:result_test/helpers/navigation_helper.dart';
+import 'package:result_test/models/user.dart';
+import 'package:result_test/services/hive_service.dart';
 
 /// Service to manage the user so that it can be used in any class.
 class UserHelper {

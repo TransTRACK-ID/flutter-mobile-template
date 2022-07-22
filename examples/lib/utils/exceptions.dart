@@ -1,4 +1,4 @@
-import 'package:result_templte/utils/typedefs.dart';
+import 'package:result_test/utils/typedefs.dart';
 
 class CustomExceptionMap implements Exception {
   CustomExceptionMap(this.cause);
