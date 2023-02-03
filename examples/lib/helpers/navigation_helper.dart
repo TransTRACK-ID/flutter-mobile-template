@@ -8,40 +8,50 @@ import 'package:result_test/utils/constants.dart';
 
 class NavigationHelper {
   final GoRouter goRouter = GoRouter(
-    urlPathStrategy: UrlPathStrategy.path,
+    initialLocation: '/',
+    errorBuilder: (context, routerState) {
+      return const Center(
+        child: Text('Page not found'),
+      );
+    },
     observers: [],
     routes: [
-      GoRoute(
-        path: '/',
-        name: 'splashpage',
-        builder: (context, routerState) => const SplashPage(),
-        redirect: redirectWhenAuthenticate,
-        routes: [
-          GoRoute(
-            path: 'login',
-            name: 'loginpage',
-            // builder: (context, routerState) => const LoginPage(),
-            pageBuilder: (context, state) => CustomTransitionPage<void>(
-              key: state.pageKey,
-              child: const LoginPage(),
-              transitionsBuilder:
-                  (context, animation, secondaryAnimation, child) =>
-                      FadeTransition(opacity: animation, child: child),
+      ShellRoute(routes: [
+        GoRoute(
+          path: '/',
+          name: 'SplashPage',
+          builder: (context, routerState) => const SplashPage(),
+          redirect: redirectWhenAuthenticate,
+          routes: [
+            GoRoute(
+              path: 'login',
+              name: 'LoginPage',
+              // builder: (context, routerState) => const LoginPage(),
+              pageBuilder: (context, state) => CustomTransitionPage<void>(
+                key: state.pageKey,
+                child: const LoginPage(),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) =>
+                        FadeTransition(opacity: animation, child: child),
+              ),
+              redirect: (context, routerState) {
+                final loggedIn = GetIt.I<UserHelper>().isLoggedIn;
+
+                if (!loggedIn) return null;
+
+                return '/';
+              },
             ),
-            redirect: (routerState) {
-              final loggedIn = GetIt.I<UserHelper>().isLoggedIn;
-
-              if (!loggedIn) return null;
-
-              return '/';
-            },
-          ),
-        ],
-      ),
+          ],
+        ),
+      ])
     ],
   );
 
-  static String? redirectWhenAuthenticate(GoRouterState routerState) {
+  static String? redirectWhenAuthenticate(
+    BuildContext context,
+    GoRouterState routerState,
+  ) {
     final loggedIn = GetIt.I<UserHelper>().isLoggedIn;
 
     if (!loggedIn) return '/login';
@@ -66,10 +76,10 @@ class NavigationHelper {
   }
 
   void goToSplash() {
-    goNamed('splashpage');
+    goNamed('SplashPage');
   }
 
   void goToLogin() {
-    goNamed('loginpage');
+    goNamed('LoginPage');
   }
 }

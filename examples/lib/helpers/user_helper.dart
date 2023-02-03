@@ -15,7 +15,7 @@ class UserHelper {
   }
 
   /// Handle logout
-  Future logout() async {
+  Future<void> logout() async {
     try {
       await GetIt.I<HiveService>().deleteUser();
       await GetIt.I<FlutterSecureStorage>().deleteAll();
