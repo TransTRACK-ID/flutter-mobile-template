@@ -20,7 +20,11 @@ class FlashMessageHelper {
     bool isError = false,
     Duration duration = const Duration(seconds: 5),
   }) {
-    final context = GetIt.I<NavigationHelper>().goRouter.navigator!.context;
+    final context = GetIt.I<NavigationHelper>()
+        .goRouter
+        .routerDelegate
+        .navigatorKey
+        .currentContext!;
 
     showFlash<void>(
       context: context,

@@ -19,8 +19,8 @@ abstract class DataTableRepository<M> extends BaseRepository {
 
 abstract class BaseRepository extends ApiServices {
   T responseWrapper<T>(
-    ResponseOfRequest response, {
-    Function(Object e)? onError,
+    ResponseOfRequest<dynamic> response, {
+    void Function(Object e)? onError,
   }) =>
       ResponseWrapper.guard(response, onError: onError);
 }

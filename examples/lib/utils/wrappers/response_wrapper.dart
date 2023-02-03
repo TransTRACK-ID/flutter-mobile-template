@@ -5,8 +5,8 @@ import 'package:result_test/utils/typedefs.dart';
 
 class ResponseWrapper {
   static T guard<T>(
-    ResponseOfRequest response, {
-    Function(Object e)? onError,
+    ResponseOfRequest<dynamic> response, {
+    void Function(Object e)? onError,
   }) {
     assert(T == MapString || T == List, 'T must be MapString or List');
 
@@ -24,3 +24,4 @@ class ResponseWrapper {
     }
   }
 }
+

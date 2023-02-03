@@ -14,7 +14,7 @@ class ExampleRepository extends BaseRepository {
     );
 
     final result = responseWrapper<List>(response);
-   
+
     return BaseResponse.success(result);
   }
 }
