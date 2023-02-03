@@ -33,5 +33,7 @@ bricks:
 
 ## Mason Command
 > dart pub global activate mason_cli
+>
 > mason get
+> 
 > mason make transtrack_mobile_template --on-conflict overwrite && sh runme.sh
